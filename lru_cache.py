@@ -9,7 +9,7 @@ class lru_cache:
     def put(self,Key:int,Value:int):
         try:
             self.cache.pop(Key)
-        except KeyError:
+        except KeyError: 
             if len(self.cache) >= self.capacity:
                 self.cache.popitem(last = False)
         self.cache[Key] = Value
